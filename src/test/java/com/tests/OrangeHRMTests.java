@@ -29,7 +29,7 @@ public final class OrangeHRMTests extends BaseTest
                            .as("Title mismatch").isEqualTo("OrangeHRM");
     }
 
-    @FrameworkAnnotations(Author = {"Raju"},Category = {CategoryType.REGRESSION})
+    @FrameworkAnnotations(Author = {"Raja"},Category = {CategoryType.REGRESSION})
     @Test
     public void dummyTest(Map<String,String> userData)
     {
