@@ -12,7 +12,7 @@ public final class AmazonHomePageTest extends BaseTest
 {
     private AmazonHomePageTest() {};
 
-    @FrameworkAnnotations(Author = {"Ravi", "Raju"}, Category = {CategoryType.REGRESSION, CategoryType.SMOKE})
+    @FrameworkAnnotations(Author = {"Ravi", "Raja"}, Category = {CategoryType.REGRESSION, CategoryType.SMOKE})
     @Test
     public void AmazonTest(Map<String, String> data)
     {
