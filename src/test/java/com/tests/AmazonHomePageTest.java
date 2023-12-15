@@ -10,7 +10,7 @@ import java.util.Map;
 
 public final class AmazonHomePageTest extends BaseTest
 {
-    private AmazonHomePageTest() {};
+    private AmazonHomePageTest() {}
 
     @FrameworkAnnotations(Author = {"Ravi", "Raja"}, Category = {CategoryType.REGRESSION, CategoryType.SMOKE})
     @Test
