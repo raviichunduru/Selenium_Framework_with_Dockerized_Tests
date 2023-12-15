@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" data-provider-thread-count="2">
+    <listeners>
+        <listener class-name="listeners.Listeners"></listener>
+        <listener class-name="listeners.MethodInterceptor"></listener>
+        <listener class-name="listeners.AnnotationTransformer"></listener>
+    </listeners>
+
+     <test name="test" thread-count="2" parallel="methods" >
+        <classes>
+            <class name="com.tests.OrangeHRMTests"/>
+            <!--<class name="com.tests.AmazonHomePageTest"/>-->
+        </classes>
+    </test>
+</suite>

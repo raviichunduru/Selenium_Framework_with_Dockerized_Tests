@@ -1,0 +1,29 @@
+version: '3.6'
+
+services:
+  selenoid:
+    image: aerokube/selenoid
+    container_name: selenoid
+    network_mode: bridge
+    restart: always
+    volumes:
+      - //var/run/docker.sock:/var/run/docker.sock
+      - C:/users/admin/config/:/etc/selenoid/:ro
+      - C:/Users/admin/selenoid/video/:/opt/selenoid/video/
+      - C:/Users/admin/selenoid/logs/:/opt/selenoid/logs/
+    environment:
+      - OVERRIDE_VIDEO_OUTPUT_DIR=/opt/selenoid/video/
+      - "STARTUP_TIMEOUT=30s"
+    ports:
+      - "4444:4444"
+
+  selenoid-ui:
+    image: aerokube/selenoid-ui
+    container_name: selenoid-ui
+    network_mode: bridge
+    restart: always
+    links:
+      - selenoid
+    ports:
+      - "8090:8080"
+    command: ["--selenoid-uri=http://selenoid:4444"]
