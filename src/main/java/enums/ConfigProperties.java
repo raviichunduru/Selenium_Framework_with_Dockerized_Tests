@@ -12,6 +12,4 @@ public enum ConfigProperties
     RUNMODE,
     SELENOIDHOST,
     SENDRESULTSTOELK;
-
-
 }
